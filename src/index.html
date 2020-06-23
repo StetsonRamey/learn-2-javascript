@@ -1,0 +1,39 @@
+---
+layout: default
+title: Home
+description: 'Learn 2 Javascript'
+---
+
+<section class="my-auto">
+  <div class="mx-auto measure fade-in-down">
+    <h1 class="mt-6">My adventures learning to program (mostly JS).</h1>
+    <h2 class="mt-6 font-sans text-2xl font-light">
+      I know a little more than nothing. Currently I like TailwindCSS, 11ty, and
+      simplicity.
+    </h2>
+    <h2 class="mt-6 font-sans text-2xl font-light">
+      At this time I lack understanding of frameworks, module bundlers, CSS, and
+      likely many other things that I don't even know I don't know.
+    </h2>
+    <article class="mt-20">
+      <h2 class="pb-2 border-b">Writing 📝</h2>
+      <ul>
+        {% for item in collections.post reversed %}
+        <li class="mt-6">
+          <time value="{{ item.date }}" class="text-sm text-gray-500 mr-8"
+            >{{ item.date | readableDate }}</time
+          >
+          <h3 class="mt-1 font-semibold inline-block">
+            <a href="{{ item.url }}">
+              {{ item.data.title}}
+            </a>
+          </h3>
+          <!-- <div class="mt-6">
+            {% if item.data.teaser %} {{ item.data.teaser }} {% endif %}
+          </div> -->
+        </li>
+        {% endfor %}
+      </ul>
+    </article>
+  </div>
+</section>

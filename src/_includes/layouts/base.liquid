@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="{{ classes.html }}">
+  <head>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <title>{{ site.title }}</title>
+  </head>
+
+  <body class="{{ classes.body }}">
+    {% include header.html %}
+    <main
+      id="main-content"
+      style="scroll-margin-top: 5rem;"
+      class="{{ classes.main }}"
+    >
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>

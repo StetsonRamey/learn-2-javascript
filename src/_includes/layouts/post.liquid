@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<section>
+
+  <article class="mx-auto measure markdown">
+    <time value="{{ date }}" class="text-sm text-gray-600">Last updated: {{ date | readableDate }}</time>
+    <h1 class="mt-6">{{ title }}</h1>
+    <p class="text-sm text-teal-400 italic">By: {{ author }}</p>
+    <div class="mt-6 text-2xl text-gray-500 flow">
+      {{ teaser }}
+    </div>
+    <div class="mt-8 flow">
+      {{ content }}
+    </div>
+  </article>
+
+  <nav class="mx-auto mt-16 measure"><a href="{{ '/' | url }}">← Home</a></nav>
+
+</section>
