@@ -5,6 +5,10 @@ module.exports = function (eleventyConfig) {
   // OPT-OUT OF USING .gitignore to prevent reload issue when css change
   eleventyConfig.setUseGitIgnore(false);
 
+  // Merge data instead of overriding
+  // https://www.11ty.dev/docs/data-deep-merge/
+  eleventyConfig.setDataDeepMerge(true);
+
   // Layout aliases for convenience
   eleventyConfig.addLayoutAlias('default', 'layouts/base.liquid');
 
@@ -19,6 +23,17 @@ module.exports = function (eleventyConfig) {
       zone: 'utc',
     }).toFormat('y-MM-dd');
   });
+
+  // compress and combine js files
+  eleventyConfig.addFilter('jsmin', require('./src/_utils/minify-js.js'));
+
+  // minify the html output when running in prod
+  if (process.env.ELEVENTY_ENV == 'production') {
+    eleventyConfig.addTransform(
+      'htmlmin',
+      require('./src/_utils/minify-html.js'),
+    );
+  }
 
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
