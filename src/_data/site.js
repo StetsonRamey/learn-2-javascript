@@ -20,6 +20,10 @@ module.exports = {
     twitter: 'https://twitter.com/stetsonramey', // used in footer
   },
 
+  github: {
+    repo: 'https://github.com/StetsonRamey/learn-2-javascript',
+  },
+
   meta_data: {
     theme_color: '#ffffff', // used in Chrome, Firefox OS and Opera
     default_social_image: '/assets/img/featured_image.png', // for Open Graph meta
