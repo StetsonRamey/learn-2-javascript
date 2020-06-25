@@ -8,7 +8,7 @@ module.exports = {
   annee: `${year}`,
   allowDarkMode: true,
   lang: 'en', // for html tag
-  title: 'Learn 2 Javascript',
+  title: 'How 2 Javascript',
   description: 'My writings on learning Javascript',
   // url: "https://mf-blogstarter.netlify.app", // don't end with a slash /
   brandName: 'SR', // for copyright and legal page
