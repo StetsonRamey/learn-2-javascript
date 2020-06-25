@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}" class="{{ classes.html }}">
   <head>
+    {% include head.html %}
+
     {% if env == 'production' %}
       {% capture css %}{% include style.min.css %}{% endcapture %}
       <style>
