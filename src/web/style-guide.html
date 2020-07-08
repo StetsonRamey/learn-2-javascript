@@ -1,1 +1,263 @@
-<h1>style guide will live here</h1>
+---
+layout: 'layouts/2-col.liquid'
+title: Style Guide
+description: All the styles in one place
+---
+
+<article class="text-left">
+  <div>
+    <h1 class="">There are many style guides but this is mine</h1>
+  </div>
+  <div class="grid content-grid grid-cols-content-grid">
+    <div class="lg:toc">
+      <h2 class="">Contents</h2>
+      <ul class="my-4 pl-3">
+        <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">Colors</li>
+        <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">Demos</li>
+        <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">Typograpy</li>
+      </ul>
+    </div>
+    <h2 class="">Colors</h2>
+    <div class="overflow-hidden py-4">
+      <div
+        class="bg-primaryBlack align-middle text-white float-left p-3 mr-1 mb-1 rounded-md"
+      >
+        Primary Black
+      </div>
+      <div
+        class="bg-secondaryBlack align-middle text-white float-left p-3 mr-1 mb-1 rounded-md"
+      >
+        Secondary Black
+      </div>
+      <div
+        class="bg-mute align-middle text-white float-left p-3 mr-1 mb-1 rounded-md"
+      >
+        Mute
+      </div>
+      <div
+        class="bg-primaryGreen align-middle text-white float-left p-3 mr-1 mb-1 rounded-md"
+      >
+        Primary Green
+      </div>
+      <div
+        class="bg-secondaryGreen align-middle text-white float-left p-3 mr-1 mb-1 rounded-md"
+      >
+        Secondary Green
+      </div>
+      <div
+        class="bg-teal align-middle text-white float-left p-3 mr-1 mb-1 rounded-md"
+      >
+        Teal
+      </div>
+      <div
+        class="bg-primaryPink align-middle text-white float-left p-3 mr-1 mb-1 rounded-md"
+      >
+        Primary Pink
+      </div>
+      <div
+        class="bg-secondaryPink align-middle text-white float-left p-3 mr-1 mb-1 rounded-md"
+      >
+        Secondary Pink
+      </div>
+    </div>
+    <h2 class="">
+      Typography
+    </h2>
+    <h3 class="">Headers And Text</h3>
+    <div class="demo">
+      <h1>Top level header</h1>
+      <p>
+        This is some nice random paragraph text to test out how some actual
+        writing, hopefully by a thoughtful crafter of prose, would write here.
+        Brevity is best, if you've got the time.
+      </p>
+      <h2>Second Level Header</h2>
+      <p>
+        This is some nice random paragraph text to test out how some actual
+        writing, hopefully by a thoughtful crafter of prose, would write here.
+        Brevity is best, if you've got the time.
+      </p>
+      <h3>Third Level Header</h3>
+      <p>
+        This is some nice random paragraph text to test out how some actual
+        writing, hopefully by a thoughtful crafter of prose, would write here.
+        Brevity is best, if you've got the time.
+      </p>
+      <h4>Fourth Level Header</h4>
+      <p>
+        This is some nice random paragraph text to test out how some actual
+        writing, hopefully by a thoughtful crafter of prose, would write here.
+        Brevity is best, if you've got the time.
+      </p>
+      <h5>Fifth Level Header</h5>
+      <p>
+        This is some nice random paragraph text to test out how some actual
+        writing, hopefully by a thoughtful crafter of prose, would write here.
+        Brevity is best, if you've got the time.
+      </p>
+    </div>
+    <h4>Primary Title</h4>
+    <div class="demo" data-demo-label="primary title">
+      <h1>This is a Primary Title</h1>
+    </div>
+    <h3>Links</h3>
+    <p>Use <code>text-decoration-skip-ink</code>, no fallback:</p>
+    <span class="demo">
+      <a href="#"
+        >This is a test with hangy things. It has a p and a g and a y and a j
+        and a q.</a
+      >
+    </span>
+    <div class="demo top" data-demo-label="break a link no hyphens">
+      <p style="width: 15em;" class="box-border">
+        <a href="#"
+          >https://some.super.long.link.with.numbers.at.the.end/1111111111111111</a
+        >
+      </p>
+    </div>
+    <div class="demo top" data-demo-label="primary link">
+      <p class="primary-link">
+        <a href="#">Primary Link w/ Arrow</a>
+      </p>
+    </div>
+    <div class="demo top" data-demo-label="primary demo link">
+      <p class="primary-link primary-link-demo">
+        <a href="#">Demo Link</a>
+      </p>
+    </div>
+    <h3>blockquotes</h3>
+    <div class="demo">
+      <p>Normal paragraph text</p>
+      <blockquote>
+        <p>
+          A looper, you know, a caddy, a looper, a jock. So, I tell them I’m a
+          pro jock, and who do you think they give me? The Dalai Lama, himself.
+          Twelfth son of the Lama. The flowing robes, the grace, bald… striking.
+          So, I’m on the first tee with him. I give him the driver. He hauls off
+          and whacks one – big hitter, the Lama – long, into a ten-thousand foot
+          crevasse, right at the base of this glacier. Do you know what the Lama
+          says? Gunga galunga… gunga, gunga lagunga. So we finish the eighteenth
+          and he’s gonna stiff me. And I say, “Hey, Lama, hey, how about a
+          little something, you know, for the effort, you know.” And he says,
+          “Oh, uh, there won’t be any money, but when you die, on your deathbed,
+          you will receive total consciousness.” So I got that goin’ for me,
+          which is nice.
+        </p>
+      </blockquote>
+      <p>Normal paragraph text</p>
+    </div>
+    <h3>Text highlighted header</h3>
+    <p>
+      Works with all levels of headers. Set any background-color and color on
+      the element.
+    </p>
+    <div class="demo">
+      <h1 class="text-highlight bg-gray-900 text-gray-100">
+        Top level header that wraps and the background color wraps too. So
+        cool....
+      </h1>
+    </div>
+    <h2>Demos</h2>
+    <p class="demo top">This is a live demo with the label at the top.</p>
+    <p class="demo">
+      This is a live demo with the label at the bottom. It is the default.
+    </p>
+    <p class="demo" data-demo-label="Label Override">
+      In case you need a custom label, override with the 'data-demo-label'
+      attribute.
+    </p>
+    <h2>Code and Code Like</h2>
+    <div class="demo">
+      <p>
+        Simple <code class="language-text">code element</code>. Typically it's
+        tucked in some other text.
+      </p>
+    </div>
+    <div class="demo">
+      <pre class="language-shell">Simple pre element.</pre>
+      <pre
+        class="language-shell"
+      ><code class="language-shell">Simple pre element.</code></pre>
+      <pre
+        class="language-shell"
+      ><code class="language-shell">pre with lots of text to show that wrapping is great and jumps to the next line without a terrible scroll bar or any weird stuff.</code></pre>
+    </div>
+    <div class="demo" data-demo-label="syntax highlighted">
+      <pre
+        class="language-js"
+      ><code class="language-js"><span class="token keyword">const</span> note <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token number">1,000,001</span><span class="token punctuation">,</span>
+  title<span class="token operator">:</span> <span class="token string">'Oh dang'</span><span class="token punctuation">,</span>
+  date<span class="token operator">:</span> <span class="token string">'01/01/1970'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre>
+    </div>
+    <div class="demo" data-demo-label="little shell w/ filename">
+      <div class="filename">filename_here</div>
+      <pre
+        class="language-shell"
+      ><code class="language-shell">code in here for coding</code></pre>
+    </div>
+    <div class="demo" data-demo-label="screen simulator">
+      <pre
+        class="language-terminal"
+      ><code class="language-terminal">Changes to be committed:
+  (use "git rm --cached ..." to unstage)
+  new file:   .gitmodules
+  new file:   posts
+      </code></pre>
+    </div>
+    <h2>Icons</h2>
+    <div class="demo">
+      <span>
+        <a
+          href="https://twitter.com/stetsonramey"
+          class="inline-block fill-current text-blue-400"
+          ><svg
+            class="w-8"
+            viewBox="0 0 20 20"
+            enable-background="new 0 0 20 20"
+            xml:space="preserve"
+          >
+            <path
+              d="M17.316,6.246c0.008,0.162,0.011,0.326,0.011,0.488c0,4.99-3.797,10.742-10.74,10.742c-2.133,0-4.116-0.625-5.787-1.697
+          	c0.296,0.035,0.596,0.053,0.9,0.053c1.77,0,3.397-0.604,4.688-1.615c-1.651-0.031-3.046-1.121-3.526-2.621
+          	c0.23,0.043,0.467,0.066,0.71,0.066c0.345,0,0.679-0.045,0.995-0.131c-1.727-0.348-3.028-1.873-3.028-3.703c0-0.016,0-0.031,0-0.047
+          	c0.509,0.283,1.092,0.453,1.71,0.473c-1.013-0.678-1.68-1.832-1.68-3.143c0-0.691,0.186-1.34,0.512-1.898
+          	C3.942,5.498,6.725,7,9.862,7.158C9.798,6.881,9.765,6.594,9.765,6.297c0-2.084,1.689-3.773,3.774-3.773
+          	c1.086,0,2.067,0.457,2.756,1.191c0.859-0.17,1.667-0.484,2.397-0.916c-0.282,0.881-0.881,1.621-1.66,2.088
+          	c0.764-0.092,1.49-0.293,2.168-0.594C18.694,5.051,18.054,5.715,17.316,6.246z"
+            /></svg
+        ></a>
+        <a href="https://github.com/stetsonramey" class="inline-block pl-3">
+          <svg class="w-8" viewBox="0 0 33 32">
+            <path
+              d="M16.288,0c-8.995,0 -16.288,7.293 -16.288,16.29c0,7.197 4.667,13.302 11.14,15.457c0.815,0.149 1.112,-0.354 1.112,-0.786c0,-0.386 -0.014,-1.411 -0.022,-2.77c-4.531,0.984 -5.487,-2.184 -5.487,-2.184c-0.741,-1.881 -1.809,-2.382 -1.809,-2.382c-1.479,-1.011 0.112,-0.991 0.112,-0.991c1.635,0.116 2.495,1.679 2.495,1.679c1.453,2.489 3.813,1.77 4.741,1.354c0.148,-1.053 0.568,-1.771 1.034,-2.178c-3.617,-0.411 -7.42,-1.809 -7.42,-8.051c0,-1.778 0.635,-3.232 1.677,-4.371c-0.168,-0.412 -0.727,-2.068 0.159,-4.311c0,0 1.368,-0.438 4.48,1.67c1.299,-0.361 2.693,-0.542 4.078,-0.548c1.383,0.006 2.777,0.187 4.078,0.548c3.11,-2.108 4.475,-1.67 4.475,-1.67c0.889,2.243 0.33,3.899 0.162,4.311c1.044,1.139 1.675,2.593 1.675,4.371c0,6.258 -3.809,7.635 -7.438,8.038c0.585,0.503 1.106,1.497 1.106,3.017c0,2.177 -0.02,3.934 -0.02,4.468c0,0.436 0.293,0.943 1.12,0.784c6.468,-2.159 11.131,-8.26 11.131,-15.455c0,-8.997 -7.294,-16.29 -16.291,-16.29"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://www.netlify.com"
+          title="Hosted by Netlify"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block fill-current text-teal pl-3"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+            <path
+              d="M28.589 14.135l-.014-.006c-.008-.003-.016-.006-.023-.013a.11.11 0 01-.028-.093l.773-4.726 3.625 3.626-3.77 1.604a.083.083 0 01-.033.006h-.015a.104.104 0 01-.02-.017 1.716 1.716 0 00-.495-.381zm5.258-.288l3.876 3.876c.805.806 1.208 1.208 1.355 1.674.022.069.04.138.054.209l-9.263-3.923a.728.728 0 00-.015-.006c-.037-.015-.08-.032-.08-.07 0-.038.044-.056.081-.071l.012-.005 3.98-1.684zm5.127 7.003c-.2.376-.59.766-1.25 1.427l-4.37 4.369-5.652-1.177-.03-.006c-.05-.008-.103-.017-.103-.062a1.706 1.706 0 00-.655-1.193c-.023-.023-.017-.059-.01-.092 0-.005 0-.01.002-.014l1.063-6.526.004-.022c.006-.05.015-.108.06-.108a1.73 1.73 0 001.16-.665c.009-.01.015-.021.027-.027.032-.015.07 0 .103.014l9.65 4.082zm-6.625 6.801l-7.186 7.186 1.23-7.56.002-.01a.136.136 0 01.006-.029c.01-.024.036-.034.061-.044l.012-.005a1.85 1.85 0 00.695-.517c.024-.028.053-.055.09-.06a.09.09 0 01.029 0l5.06 1.04zm-8.707 8.707l-.81.81-8.955-12.942a.424.424 0 00-.01-.014c-.014-.019-.029-.038-.026-.06.001-.016.011-.03.022-.042l.01-.013c.027-.04.05-.08.075-.123l.02-.035.003-.003c.014-.024.027-.047.051-.06.021-.01.05-.006.073-.001l9.921 2.046a.164.164 0 01.076.033c.013.013.016.027.019.043a1.757 1.757 0 001.028 1.175c.028.014.016.045.003.078a.238.238 0 00-.015.045c-.125.76-1.197 7.298-1.485 9.063zm-1.692 1.691c-.597.591-.949.904-1.347 1.03a2 2 0 01-1.206 0c-.466-.148-.869-.55-1.674-1.356L8.73 28.73l2.349-3.643a.15.15 0 01.04-.047c.025-.018.061-.01.091 0a2.434 2.434 0 001.638-.083c.027-.01.054-.017.075.002a.19.19 0 01.028.032L21.95 38.05zM7.863 27.863L5.8 25.8l4.074-1.738a.084.084 0 01.033-.007c.034 0 .054.034.072.065a2.91 2.91 0 00.13.184l.013.016c.012.017.004.034-.008.05l-2.25 3.493zm-2.976-2.976l-2.61-2.61c-.444-.444-.766-.766-.99-1.043l7.936 1.646a.84.84 0 00.03.005c.049.008.103.017.103.063 0 .05-.059.073-.109.092l-.023.01-4.337 1.837zM.831 19.892a2 2 0 01.09-.495c.148-.466.55-.868 1.356-1.674l3.34-3.34a2175.525 2175.525 0 004.626 6.687c.027.036.057.076.026.106a2.776 2.776 0 00-.395.528.16.16 0 01-.05.062c-.013.008-.027.005-.042.002H9.78L.831 19.891zm5.68-6.403l4.491-4.491c.422.185 1.958.834 3.332 1.414 1.04.44 1.988.84 2.286.97.03.012.057.024.07.054.008.018.004.041 0 .06a2.003 2.003 0 00.523 1.828c.03.03 0 .073-.026.11l-.014.021-4.56 7.063a.138.138 0 01-.043.05c-.024.015-.058.008-.086.001a2.274 2.274 0 00-.543-.074c-.164 0-.342.03-.522.063h-.001c-.02.003-.038.007-.054-.005a.21.21 0 01-.045-.051l-4.808-7.013zm5.398-5.398l5.814-5.814c.805-.805 1.208-1.208 1.674-1.355a2 2 0 011.206 0c.466.147.869.55 1.674 1.355l1.26 1.26-4.135 6.404a.155.155 0 01-.041.048c-.025.017-.06.01-.09 0a2.097 2.097 0 00-1.92.37c-.027.028-.067.012-.101-.003-.54-.235-4.74-2.01-5.341-2.265zm12.506-3.676l3.818 3.818-.92 5.698v.015a.135.135 0 01-.008.038c-.01.02-.03.024-.05.03a1.83 1.83 0 00-.548.273.154.154 0 00-.02.017c-.011.012-.022.023-.04.025a.114.114 0 01-.043-.007l-5.818-2.472-.011-.005c-.037-.015-.081-.033-.081-.071a2.198 2.198 0 00-.31-.915c-.028-.046-.059-.094-.035-.141l4.066-6.303zm-3.932 8.606l5.454 2.31c.03.014.063.027.076.058a.106.106 0 010 .057c-.016.08-.03.171-.03.263v.153c0 .038-.039.054-.075.069l-.011.004c-.864.369-12.13 5.173-12.147 5.173-.017 0-.035 0-.052-.017-.03-.03 0-.072.027-.11a.76.76 0 00.014-.02l4.482-6.94.008-.012c.026-.042.056-.089.104-.089l.045.007c.102.014.192.027.283.027.68 0 1.31-.331 1.69-.897a.16.16 0 01.034-.04c.027-.02.067-.01.098.004zm-6.246 9.185l12.28-5.237s.018 0 .035.017c.067.067.124.112.179.154l.027.017c.025.014.05.03.052.056 0 .01 0 .016-.002.025L25.756 23.7l-.004.026c-.007.05-.014.107-.061.107a1.729 1.729 0 00-1.373.847l-.005.008c-.014.023-.027.045-.05.057-.021.01-.048.006-.07.001l-9.793-2.02c-.01-.002-.152-.519-.163-.52z"
+            />
+          </svg>
+        </a>
+      </span>
+    </div>
+    <h2>Tags</h2>
+    <p>I prefer to leave the color out of the <code class="language-text">css</code> and set the color and hover states on the element.  I may change this at some point</p>
+    <div class="demo">
+      <div class="tags">
+        <a href="#" class="bg-yellow-300 hover:bg-yellow-500">Javascript</a>
+        <a href="#" class="bg-gray-700 text text-white hover:bg-gray-300 hover:text-gray-700">11ty</a>
+        <a href="#" class="bg-blue-400 hover:bg-blue-600">taggy tag</a>
+      </div>
+    </div>
+  </div>
+</article>

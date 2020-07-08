@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="{{ classes.html }}">
+  <head>
+    {% include head.html %} {% if env == 'production' %} {% capture css %}{%
+    include style.min.css %}{% endcapture %}
+    <style>
+      {{ css }}
+    </style>
+    {% else %}
+    <link rel="stylesheet" href="/assets/style.css" />
+    {% endif %}
+    <title>{{ site.title }}</title>
+  </head>
+
+  <body class="{{ classes.body }}">
+    {% include header.html %}
+    <main
+      id="main-content"
+      style="scroll-margin-top: 5rem;"
+      class="max-w-none px-3"
+    >
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
