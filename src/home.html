@@ -1,0 +1,52 @@
+---
+layout: layouts/tania.liquid
+title: Tania's Home Page Style
+description: 'Learn 2 Javascript'
+---
+
+<section class="my-16 mx-0">
+  <div class="max-w-screen-sm">
+    <h5 class="font-semibold text-3xl">const name = Stetson;</h5>
+    <p class="text-gray-500 font-semibold">
+      I'm an aspiring developer, curious engineer, voracious reader, and
+      terrible writer. This website is mostly a place where I intend to figure
+      things out that I'm interested in.
+    </p>
+    <p>
+      This website has no ads or trackers, no third party scripts, no writing
+      from anyone but me, no affiliate links, no empty sales pitches, or any of
+      the other bullshit I'm tired of seeing on the internet.
+    </p>
+    <p>
+      I hope you enjoy reading what I <a href="/web/blog">write</a>. I'll try
+      and make it direct, easy, and clear. Feel free to shoot me an email at
+      <span class="font-semibold">stetson.ramey@gmail.com</span>.
+    </p>
+    <p class="text-base italic text-red-600">
+      emails regarding ads or sponsored posts...no thank you plus I have zero
+      traffic. If you're a headhunter, don't bother unless the money is
+      absolutely ridiculous, or it's Tesla or SpaceX.
+    </p>
+  </div>
+  <div class="hidden md:block">photo here</div>
+</section>
+<section>
+  <h2>Latest</h2>
+  <div class="grid items-stretch">
+    {% for item in collections.post reversed %}
+    <a href="#" class="block mb-4">
+      <div>
+        <time value="{{ item.date }}" class="text-sm text-gray-500 mr-8">
+          {{ item.date | readableDate }}
+        </time>
+      </div>
+      <div class="text-xl font-bold">
+        {{ item.data.title}}
+      </div>
+      <div class="tags">
+        tags here
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

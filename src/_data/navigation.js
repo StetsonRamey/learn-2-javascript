@@ -1,6 +1,6 @@
 module.exports = {
   main: [
-    { label: 'Home', url: '/', external: false },
+    { label: 'Blog', url: '/web/blog', external: false },
     { label: 'About', url: '/about/', external: false },
   ],
 };

@@ -9,15 +9,59 @@ description: All the styles in one place
     <h1 class="col-start-2 col-end-3">
       There are many style guides but this is mine
     </h1>
+    <h5 class="italic">
+      Big thanks to
+      <a
+        href="https://www.zachleat.com/web/style-guide/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Zach Leatherman</a
+      >
+      for the inspiration.....and
+      <a
+        href="https://www.11ty.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >11ty</a
+      >. This style guide is a direct knock off of his, because he's smart and
+      his style guide is great.
+    </h5>
     <div class="lg:toc">
-      <h2 class="lg:text-base lg:border-b-0">Contents</h2>
-      <ul class="my-4 pl-3">
-        <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">Colors</li>
-        <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">Demos</li>
-        <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">Typograpy</li>
+      <h2 class="lg:text-lg lg:mb-1 lg:border-b-0">Contents</h2>
+      <ul class="lg:text-base my-4 lg:mt-2 pl-3">
+        <a href="#colors" class="">
+          <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">
+            Colors
+          </li>
+        </a>
+        <a href="#typography" class="">
+          <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">
+            Typograpy
+          </li>
+        </a>
+        <a href="#demo" class="">
+          <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">
+            Demos
+          </li>
+        </a>
+        <a href="#code" class="">
+          <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">
+            Code
+          </li>
+        </a>
+        <a href="#icons" class="">
+          <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">
+            Icons
+          </li>
+        </a>
+        <a href="#tags" class="">
+          <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">
+            Tags
+          </li>
+        </a>
       </ul>
     </div>
-    <h2 class="">Colors</h2>
+    <h2 id="colors">Colors</h2>
     <div class="overflow-hidden py-4">
       <div
         class="bg-primaryBlack align-middle text-white float-left p-3 mr-1 mb-1 rounded-md"
@@ -60,7 +104,7 @@ description: All the styles in one place
         Secondary Pink
       </div>
     </div>
-    <h2 class="">
+    <h2 id="typography">
       Typography
     </h2>
     <h3 class="">Headers And Text</h3>
@@ -157,7 +201,7 @@ description: All the styles in one place
         cool....
       </h1>
     </div>
-    <h2>Demos</h2>
+    <h2 id="demo">Demos</h2>
     <p class="demo top">This is a live demo with the label at the top.</p>
     <p class="demo">
       This is a live demo with the label at the bottom. It is the default.
@@ -166,7 +210,7 @@ description: All the styles in one place
       In case you need a custom label, override with the 'data-demo-label'
       attribute.
     </p>
-    <h2>Code and Code Like</h2>
+    <h2 id="code">Code and Code Like</h2>
     <div class="demo">
       <p>
         Simple <code class="language-text">code element</code>. Typically it's
@@ -206,7 +250,7 @@ description: All the styles in one place
   new file:   posts
       </code></pre>
     </div>
-    <h2>Icons</h2>
+    <h2 id="icons">Icons</h2>
     <div class="demo">
       <span>
         <a
@@ -250,7 +294,7 @@ description: All the styles in one place
         </a>
       </span>
     </div>
-    <h2>Tags</h2>
+    <h2 id="tags">Tags</h2>
     <p>
       I prefer to leave the color out of the
       <code class="language-text">css</code> and set the color and hover states

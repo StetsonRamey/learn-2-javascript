@@ -13,6 +13,9 @@ module.exports = {
     darkSelector: '.dark-mode',
     // Extends default settings
     extend: {
+      boxShadow: {
+        nav: '0 3px 13px rgba(100,110,140,.1),0 2px 4px rgba(100,110,140,.15)',
+      },
       fontFamily: {
         // Use Tailwind default serif fonts with font-display
         display: [...defaultTheme.fontFamily.sans],

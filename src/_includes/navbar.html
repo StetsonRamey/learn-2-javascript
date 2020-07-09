@@ -1,15 +1,17 @@
-<div class="{{ classes.navbar}}">
-  <nav class="flex items-center mx-auto measure">
-    <a href="/" class="p-2 text-sm font-bold hover:bg-blue-400">
+<nav class="{{ classes.navbar }} navbar">
+  <div class="flex justify-between mx-auto items-center max-w-screen-lg md:justify-start">
+    <div>
+      <a href="/" class="py-4 px-6 text-md font-bold whitespace-no-wrap hover:bg-blue-400 rounded-sm md:mr-12 md:px-4 md:py-6">
       How 2 Javascript
-      <span class="sr-only">Back to homepage</span>
-    </a>
+        <span class="sr-only">Back to homepage</span>
+      </a>
+    </div>
 
-    <div class="flex items-center ml-auto -mb-px">
+    <div class="flex">
       {% for item in navigation.main %}
       <a {% if item.external %}rel="external" {% endif %} href="{{ item.url }}"
-      class="px-1 py-4 text-base leading-5 whitespace-no-wrap border-b-2 border-transparent focus:outline-none hover:border-blue-400 focus:border-blue-400 ml-6 md:ml-12 {% if page.url == item.url %}border-primary{% endif %}" {% if page.url == item.url %} aria-current="page" {% endif %}>{{ item.label }}</a>
+      class="px-3 py-5 mx-1 text-md border-b-2 border-transparent focus:outline-none hover:border-blue-400 focus:border-blue-400 {% if page.url == item.url %}border-primary{% endif %}" {% if page.url == item.url %} aria-current="page" {% endif %}>{{ item.label }}</a>
       {% endfor %}
     </div>
-  </nav>
-</div>
+  </div>
+</nav>
