@@ -12,15 +12,19 @@
     <title>{{ site.title }}</title>
   </head>
 
-  <body class="{{ classes.body }}">
-    {% include header.html %}
+  <body class="{{ classes.bodyGuide }}">
+    <div class="col-start-1 col-end-5">
+      {% include header.html %}
+    </div>
     <main
       id="main-content"
       style="scroll-margin-top: 5rem;"
-      class="max-w-none px-3"
+      class="max-w-none px-3 mt-32 col-start-2 col-end-3"
     >
       {{ content }}
+      <div class="max-w-xl mx-auto">
+        {% include footer.html %}
+      </div>
     </main>
-    {% include footer.html %}
   </body>
 </html>

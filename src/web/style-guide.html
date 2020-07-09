@@ -5,12 +5,12 @@ description: All the styles in one place
 ---
 
 <article class="text-left">
-  <div>
-    <h1 class="">There are many style guides but this is mine</h1>
-  </div>
   <div class="grid content-grid grid-cols-content-grid">
+    <h1 class="col-start-2 col-end-3">
+      There are many style guides but this is mine
+    </h1>
     <div class="lg:toc">
-      <h2 class="">Contents</h2>
+      <h2 class="lg:text-base lg:border-b-0">Contents</h2>
       <ul class="my-4 pl-3">
         <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">Colors</li>
         <li class="p-1 pl-2 hover:bg-gray-300 rounded-md">Demos</li>
@@ -251,11 +251,19 @@ description: All the styles in one place
       </span>
     </div>
     <h2>Tags</h2>
-    <p>I prefer to leave the color out of the <code class="language-text">css</code> and set the color and hover states on the element.  I may change this at some point</p>
+    <p>
+      I prefer to leave the color out of the
+      <code class="language-text">css</code> and set the color and hover states
+      on the element. I may change this at some point
+    </p>
     <div class="demo">
       <div class="tags">
         <a href="#" class="bg-yellow-300 hover:bg-yellow-500">Javascript</a>
-        <a href="#" class="bg-gray-700 text text-white hover:bg-gray-300 hover:text-gray-700">11ty</a>
+        <a
+          href="#"
+          class="bg-gray-700 text text-white hover:bg-gray-300 hover:text-gray-700"
+          >11ty</a
+        >
         <a href="#" class="bg-blue-400 hover:bg-blue-600">taggy tag</a>
       </div>
     </div>
