@@ -34,7 +34,7 @@ module.exports = {
         mute: 'var(--color-mute)',
         primaryGreen: 'var(--color-primaryGreen)',
         secondaryGreen: 'var(--color-secondaryGreen)',
-        teal: 'var(--color-teal)',
+        tealish: 'var(--color-tealish)',
         primaryPink: 'var(--color-primaryPink)',
         secondaryPink: 'var(--color-secondaryPink)',
         blockquoteBorder: 'var(--color-blockquoteBorder)',
@@ -43,13 +43,23 @@ module.exports = {
       gridTemplateColumns: {
         '2': '1.5rem 1fr 13.5rem 2.5rem',
         'content-grid': '1fr minmax(auto,31em) 1fr',
+        'post-display': '200px 4fr 2fr',
       },
     },
   },
   variants: {
-    backgroundColor: ['hover', 'focus', 'dark', 'dark-hover', 'dark-focus'],
+    backgroundColor: [
+      'hover',
+      'group-hover',
+      'focus',
+      'dark',
+      'dark-hover',
+      'dark-focus',
+    ],
     borderColor: ['hover', 'focus', 'dark', 'dark-hover', 'dark-focus'],
     textColor: ['hover', 'focus', 'dark', 'dark-hover', 'dark-focus'],
+    padding: ['first', 'last', 'responsive'],
+    margin: ['first', 'last', 'responsive'],
   },
   plugins: [
     require('tailwindcss-dark-mode')(), // https://github.com/ChanceArthur/tailwindcss-dark-mode

@@ -4,49 +4,62 @@ title: Tania's Home Page Style
 description: 'Learn 2 Javascript'
 ---
 
-<section class="my-16 mx-0">
-  <div class="max-w-screen-sm">
-    <h5 class="font-semibold text-3xl">const name = Stetson;</h5>
-    <p class="text-gray-500 font-semibold">
+<section class="my-16 mx-0 md:flex lg:items-center md:justify-between">
+  <div class="">
+    <h5 class="font-semibold text-4xl mt-0 max-w-screen-sm">
+      const name = Stetson;
+    </h5>
+    <p class="text-gray-500 font-semibold max-w-screen-sm">
       I'm an aspiring developer, curious engineer, voracious reader, and
       terrible writer. This website is mostly a place where I intend to figure
       things out that I'm interested in.
     </p>
-    <p>
+    <p class="max-w-screen-sm">
       This website has no ads or trackers, no third party scripts, no writing
       from anyone but me, no affiliate links, no empty sales pitches, or any of
       the other bullshit I'm tired of seeing on the internet.
     </p>
-    <p>
+    <p class="max-w-screen-sm">
       I hope you enjoy reading what I <a href="/web/blog">write</a>. I'll try
       and make it direct, easy, and clear. Feel free to shoot me an email at
       <span class="font-semibold">stetson.ramey@gmail.com</span>.
     </p>
-    <p class="text-base italic text-red-600">
+    <p class="text-base italic text-red-600 max-w-screen-sm">
       emails regarding ads or sponsored posts...no thank you plus I have zero
       traffic. If you're a headhunter, don't bother unless the money is
       absolutely ridiculous, or it's Tesla or SpaceX.
     </p>
   </div>
-  <div class="hidden md:block">photo here</div>
-</section>
-<section>
-  <h2>Latest</h2>
-  <div class="grid items-stretch">
-    {% for item in collections.post reversed %}
-    <a href="#" class="block mb-4">
-      <div>
-        <time value="{{ item.date }}" class="text-sm text-gray-500 mr-8">
-          {{ item.date | readableDate }}
-        </time>
-      </div>
-      <div class="text-xl font-bold">
-        {{ item.data.title}}
-      </div>
-      <div class="tags">
-        tags here
-      </div>
-    </a>
-    {% endfor %}
+  <div class="ml-8 rounded-md md:flex-shrink-0 hidden md:block">
+    <img
+      src="https://via.placeholder.com/200"
+      srcset="
+        https://via.placeholder.com/200 200w,
+        https://via.placeholder.com/350 350w
+      "
+      sizes="(max-width: 1024px) 200px,
+    350px"
+      alt=""
+      class="rounded-md"
+    />
   </div>
+</section>
+{% include latest-posts.html %}
+{% include 11ty-series.html %}
+<section class="max-w-screen-sm">
+  <h2>Newsletter</h2>
+  <p>
+    I'll get this setup soon. I'll never send you anything spammy or lame, and
+    at least until the time that I believe I can add value and work out the
+    details of a better model to do so than currently exists, I'll never attempt
+    to sell you anything.
+  </p>
+</section>
+<section class="max-w-screen-sm">
+  <h2>Search</h2>
+  <p>
+    I'm going to work on <em>rolling my own</em> search (as I've seen others
+    say) in lieu of adding a library or third party search tool. It's not
+    critical until there are numerous posts anyway.
+  </p>
 </section>

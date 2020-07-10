@@ -1,6 +1,8 @@
 ---
 title: Testing out Markdown
-teaser: Making sure all the formatting and stuff works
+tags:
+  - javascript
+  - 11ty
 date: 2020-06-23
 ---
 

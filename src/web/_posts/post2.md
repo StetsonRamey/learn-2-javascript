@@ -1,6 +1,7 @@
 ---
 title: Post 2 is a copy of Post 1
-teaser: Doing a little something something
+tags:
+  - tailwindcss
 date: 2020-06-23
 ---
 

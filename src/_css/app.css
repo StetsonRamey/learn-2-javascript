@@ -24,7 +24,7 @@
   --color-mute: #3e4851;
   --color-primaryGreen: #192b2f;
   --color-secondaryGreen: #203941;
-  --color-teal: #437789;
+  --color-tealish: #437789;
   --color-primaryPink: #ff206e;
   --color-secondaryPink: #ff85af;
   --color-blockquotebg: #fff9db;
@@ -163,6 +163,7 @@ blockquote {
 }
 
 /* Links */
+
 a:focus {
   outline: none;
 }
@@ -229,6 +230,9 @@ a:not([class]):hover {
   grid-column-start: 2;
   grid-column-end: 3;
 }
+.post-row {
+  display: contents;
+}
 
 /* Extra Markdown styles (bold and italic are already set up in @ tailwind base */
 .markdown ul {
@@ -258,7 +262,7 @@ a:not([class]):hover {
 
 /* Demo component */
 .demo {
-  @apply block relative px-4 py-3 -mx-3 mt-2 mb-6 border border-teal rounded-md;
+  @apply block relative px-4 py-3 -mx-3 mt-2 mb-6 border border-tealish rounded-md;
 }
 
 .demo::after {
@@ -269,7 +273,7 @@ a:not([class]):hover {
   text-transform: uppercase;
   font-weight: 400;
   background: #fff;
-  @apply text-teal px-1 text-xs font-normal;
+  @apply text-tealish px-1 text-xs font-normal;
 }
 
 .demo.top::after {
