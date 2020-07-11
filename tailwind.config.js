@@ -42,7 +42,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         '2': '1.5rem 1fr 13.5rem 2.5rem',
-        'content-grid': '1fr minmax(auto,31em) 1fr',
+        'content-grid': '1fr minmax(auto,55em) 1fr',
         'post-display': '200px 4fr 2fr',
       },
     },

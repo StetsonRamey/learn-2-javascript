@@ -9,8 +9,8 @@ module.exports = {
   main: 'flex flex-col flex-grow',
   '2Col': 'grid-cols-2 col-gap-4',
   contact_button: 'btn btn-primary text-white dark:text-cool-gray-900',
-  footer: 'my-20 mx-auto max-w-scree-lg',
-  tag: 'text-sm py-1 px-2 mr-1 rounded-sm',
+  footer: 'my-20 mx-auto max-w-screen-xl',
+  tag: 'text-sm py-1 px-2 mx-1 rounded-sm',
   'js-tag':
     'text-gray-900 bg-yellow-400 hover:text-gray-800 hover:bg-yellow-600',
   'tailwind-tag':

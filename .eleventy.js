@@ -41,6 +41,11 @@ module.exports = function (eleventyConfig) {
   // Static assets to pass through
   eleventyConfig.addPassthroughCopy('src/assets');
 
+  // Get all the posts to display on the blog page
+  eleventyConfig.addCollection('posts', function (collectionApi) {
+    return collectionApi.getFilteredByGlob('./src/web/**/*.md');
+  });
+
   return {
     dir: {
       input: 'src',

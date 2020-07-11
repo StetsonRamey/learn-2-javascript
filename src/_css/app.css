@@ -286,6 +286,27 @@ a:not([class]):hover {
   content: attr(data-demo-label);
 }
 
+/* Callouts */
+.callout {
+  @apply p-2 mt-3 border-2 border-gray-400 rounded-md shadow-sm
+}
+
+.callout-respect {
+  @apply bg-yellow-200
+}
+
+.callout h3 {
+  @apply my-2 text-xl text-gray-700
+}
+
+.callout h3::after {
+  content: ':';
+}
+
+.callout p {
+  @apply italic text-lg leading-normal
+}
+
 /* External links icon */
 a[rel~='external']::after {
   content: '↗';
