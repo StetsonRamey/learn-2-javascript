@@ -12,21 +12,25 @@
         {{ item.data.title}}
       </div>
       <div class="flex items-center py-1 mb-6">
-        {%- if item.data.tags contains '11ty' %}<a href="/tags/11ty" class=""
-          ><span class="{{ classes.11ty-tag }} {{ classes.tag }}">11ty</span></a
-        >{% endif -%} {%- if item.data.tags contains 'javascript' %}<a
-          href="/tags/javascript"
-          class=""
-          ><span class="{{ classes.js-tag }} {{ classes.tag }}"
-            >javascript</span
-          ></a
-        >{% endif -%} {%- if item.data.tags contains 'tailwindcss' %}<a
-          href="/tags/tailwindcss"
-          class=""
-          ><span class="{{ classes.tailwind-tag }} {{ classes.tag }}"
-            >tailwindcss</span
-          ></a
-        >{% endif -%}
+        {%- if item.data.tags contains '11ty' %}
+        <a href="/tags/11ty" class="">
+          <span class="{{ classes.11ty-tag }} {{ classes.tag }}">
+            11ty
+          </span>
+        </a>
+        {% endif -%} {%- if item.data.tags contains 'javascript' %}
+        <a href="/tags/javascript" class="">
+          <span class="{{ classes.js-tag }} {{ classes.tag }}">
+            javascript
+          </span>
+        </a>
+        {% endif -%} {%- if item.data.tags contains 'tailwindcss' %}
+        <a href="/tags/tailwindcss" class="">
+          <span class="{{ classes.tailwind-tag }} {{ classes.tag }}">
+            tailwindcss
+          </span>
+        </a>
+        {% endif -%}
       </div>
     </a>
     {% endfor %}
