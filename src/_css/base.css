@@ -204,13 +204,3 @@ a:not([class]):hover {
 .post-row {
   display: contents;
 }
-
-/* Extra Markdown styles (bold and italic are already set up in @ tailwind base */
-.markdown ul {
-  list-style-type: disc;
-  list-style-position: inside;
-}
-.markdown ol {
-  list-style-type: decimal;
-  list-style-position: inside;
-}

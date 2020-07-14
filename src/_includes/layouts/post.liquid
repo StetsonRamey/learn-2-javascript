@@ -1,21 +1,39 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ site.lang }}" class="{{ classes.html }}">
+  <head>
+    {% include head.html %} {% if env == 'production' %} {% capture css %}{%
+    include style.min.css %}{% endcapture %}
+    <style>
+      {{ css }}
+    </style>
+    {% else %}
+    <link rel="stylesheet" href="/assets/style.css" />
+    {% endif %}
+    <title>{{ site.title }}</title>
+  </head>
 
-<section>
+  <body class="px-6 bg-gray-100">
+    {% include header.html %}
+    <main
+      id="main-content"
+      style="scroll-margin-top: 5rem;"
+      class="mx-auto max-w-screen-xl mt-32 md:mt-8"
+    >
+      <section>
+        <article class="mx-auto measure markdown">
+          <time value="{{ date }}" class="text-sm text-gray-600"
+            >Last updated: {{ date | readableDate }}</time
+          >
+          <header>
+            <h1 class="mt-6">{{ title }}</h1>
+          </header>
+          <div class="markdown">
+            {{ content }}
+          </div>
+        </article>
+      </section>
+    </main>
 
-  <article class="mx-auto measure markdown">
-    <time value="{{ date }}" class="text-sm text-gray-600">Last updated: {{ date | readableDate }}</time>
-    <h1 class="mt-6">{{ title }}</h1>
-    <p class="text-sm text-teal-400 italic">By: {{ author }}</p>
-    <div class="mt-6 text-2xl text-gray-500 flow">
-      {{ teaser }}
-    </div>
-    <div class="mt-8 flow">
-      {{ content }}
-    </div>
-  </article>
-
-  <nav class="mx-auto mt-16 measure"><a href="{{ '/' | url }}">← Home</a></nav>
-
-</section>
+    {% include footer.html %}
+  </body>
+</html>

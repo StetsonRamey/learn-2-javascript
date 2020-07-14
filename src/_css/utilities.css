@@ -101,3 +101,20 @@ a[rel~='external']::after {
   /* background: #868e96; */
   /* color: white; */
 }
+
+/* Extra Markdown styles (bold and italic are already set up in @ tailwind base */
+.markdown {
+  img {
+    @apply mx-auto;
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+}
