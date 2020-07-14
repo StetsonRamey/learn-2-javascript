@@ -1,0 +1,216 @@
+/* ************************** */
+/* CSS Variables */
+/* ************************* */
+
+:root {
+  /* Measure */
+  --measure: theme('maxWidth.3xl');
+
+  /* Flow */
+  --flow-space: 1.5em;
+
+  /* Colors */
+  --color-primary: #1a5653;
+  --color-secondary: #107869;
+  --color-textHeading: theme('colors.gray.800');
+  --color-textParagraph: theme('colors.gray.700');
+  --color-textLight: theme('colors.gray.500');
+  --color-bgGray: #3e4851;0
+  --color-demoBorderGrn: #3eb489;
+  --color-demoBorderTxt: rgba(62, 180, 137, 0.7);
+  --color-linkHover: #ea85c7;
+  --color-link: #f3b9df;
+  --color-blockquotebg: #fff9db;
+  --color-blockquoteBorder: #ffe066;
+  --color-callout: theme('colors.yellow.200');
+  --color-calloutBorder: theme('colors.gray.400');
+}
+
+/* ************************** */
+/* Custom Base Styles */
+/* ************************* */
+
+:root {
+  -webkit-overflow-scrolling: touch; /* Prevent scroll issues in iOS */
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+::selection {
+  @apply text-white bg-primary;
+}
+
+:focus,
+button:focus {
+  outline: 1px solid var(--color-secondary);
+  outline-offset: 0.1rem;
+}
+:hover:focus {
+  outline: 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply text-headingtext;
+}
+p,
+div {
+  @apply text-paragraphtext;
+}
+
+h1 {
+  @apply mt-0 mb-10;
+}
+h2 {
+  @apply mt-16 mb-8;
+}
+h3 {
+  @apply mt-8 mb-6;
+}
+h4,
+h5 {
+  @apply mt-4 mb-3;
+}
+h2 {
+  @apply border-b border-gray-400 pb-3;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-bold leading-tight font-display uppercase;
+}
+h4,
+h5 {
+  @apply font-display;
+}
+h1 {
+  @apply text-4xl;
+}
+h2 {
+  @apply text-3xl;
+}
+h3 {
+  @apply text-2xl;
+}
+h4,
+h5 {
+  @apply text-xl;
+}
+p {
+  @apply py-2 text-xl;
+}
+
+@screen md {
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4,
+  h5 {
+    @apply text-2xl;
+  }
+}
+ul {
+  @apply text-xl;
+}
+
+/* WHERE am I USING THIS? */
+.text-highlight {
+  @apply inline px-1 -mx-1;
+}
+.text-highlight {
+  box-decoration-break: clone;
+}
+
+blockquote {
+  @apply p-5 bg-blockquotebg border border-blockquoteBorder border-l-8 rounded;
+}
+
+/* Links */
+
+a:focus {
+  outline: none;
+}
+
+a:not([class]) {
+  color: theme('colors.gray.700');
+  background-image: linear-gradient(transparent 50%, var(--color-link) 0px);
+  padding-right: 4px;
+  padding-bottom: 2px;
+  background-position: 4px 2px;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  transition: all 0.18s ease 0s;
+  word-break: break-word;
+}
+a:not([class]):hover {
+  background-position: right -4px top 7px;
+  padding-right: 4px;
+  padding-bottom: 2px;
+  color: var(--color-linkHover);
+}
+
+.primary-link {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.primary-link::before {
+  content: '\2192';
+}
+
+.primary-link-demo::after {
+  content: ' (Demo)';
+  font-weight: normal;
+}
+
+/* Content flow */
+.flow {
+  max-width: var(--measure);
+}
+.flow > * + * {
+  margin-top: 1.5em;
+  margin-top: var(--flow-space);
+}
+.flow > p + p {
+  --flow-space: 1em;
+}
+.flow > h1 + p,
+.flow > h2 + p,
+.flow > h3 + p,
+.flow > h4 + p {
+  --flow-space: 1.25em;
+}
+
+.measure {
+  max-width: var(--measure);
+}
+
+/* Grid Shit */
+.content-grid > * {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.post-row {
+  display: contents;
+}
+
+/* Extra Markdown styles (bold and italic are already set up in @ tailwind base */
+.markdown ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.markdown ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}

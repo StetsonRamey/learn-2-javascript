@@ -1,0 +1,103 @@
+/* TOC Custom Stuffs */
+@responsive {
+  .toc {
+    font-size: 1rem;
+    display: block;
+    position: fixed;
+    bottom: 1em;
+    width: 13.5em;
+    right: 3.5em;
+  }
+}
+
+/* Demo component */
+.demo {
+  @apply block relative px-4 py-3 -mx-3 mt-2 mb-6 border border-demoBorder rounded-md;
+}
+
+.demo::after {
+  position: absolute;
+  right: 1.25rem;
+  bottom: -9px;
+  content: 'Demonstration';
+  text-transform: uppercase;
+  font-weight: 400;
+  background: #fff;
+  @apply text-demoTxt px-1 text-xs font-normal;
+}
+
+.demo.top::after {
+  right: 1.25rem;
+  bottom: auto;
+  top: -10px;
+}
+
+.demo[data-demo-label]::after {
+  content: attr(data-demo-label);
+}
+
+/* Callouts */
+.callout {
+  @apply p-2 mt-3 border-2 border-calloutBorder rounded-md shadow-sm;
+}
+
+.callout-respect {
+  @apply bg-calloutBg;
+}
+
+.callout h3 {
+  @apply my-2 text-xl text-gray-700;
+}
+
+.callout h3::after {
+  content: ':';
+}
+
+.callout p {
+  @apply italic text-lg leading-normal;
+}
+
+/* External links icon */
+a[rel~='external']::after {
+  content: '↗';
+  font-family: system-ui, -apple-system, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  color: currentColor;
+  padding-left: 0.2em;
+  line-height: 0.75;
+  text-decoration-line: none;
+}
+
+/* Tags */
+.tags {
+  display: flex !important;
+  align-items: center;
+  text-transform: lowercase;
+}
+
+.tags > a {
+  display: block;
+  font-weight: 500;
+  /* background: #f1f3f5; */
+  /* color: #343a40; */
+  margin: 0.2rem;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.3rem;
+  border-bottom: 0;
+  white-space: nowrap;
+}
+
+.tags > a:first-child {
+  margin-left: 0;
+}
+
+.tags > a:last-child {
+  margin-right: 0;
+}
+
+.tags > a:hover {
+  /* background: #868e96; */
+  /* color: white; */
+}
