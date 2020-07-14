@@ -15,7 +15,7 @@
   --color-textHeading: theme('colors.gray.800');
   --color-textParagraph: theme('colors.gray.700');
   --color-textLight: theme('colors.gray.500');
-  --color-bgGray: #3e4851;0
+  --color-bgGray: #3e4851;
   --color-demoBorderGrn: #3eb489;
   --color-demoBorderTxt: rgba(62, 180, 137, 0.7);
   --color-linkHover: #ea85c7;
