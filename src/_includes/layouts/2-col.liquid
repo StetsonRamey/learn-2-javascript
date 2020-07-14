@@ -12,14 +12,14 @@
     <title>{{ site.title }}</title>
   </head>
 
-  <body class="{{ classes.bodyGuide }}">
+  <body class="{{ classes.bodyGuide }} bg-gray-100">
     <div class="col-start-1 col-end-5">
       {% include header.html %}
     </div>
     <main
       id="main-content"
       style="scroll-margin-top: 5rem;"
-      class="max-w-none px-8 mt-32 md:mt-16 col-start-2 col-end-3"
+      class="max-w-none mt-32 md:mt-16 col-start-2 col-end-3"
     >
       {{ content }}
       <div class="md:max-w-xl">
