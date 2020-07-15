@@ -1,0 +1,19 @@
+{%- if tags contains '11ty' %}
+<a href="/tags/11ty" class="">
+  <span class="{{ classes.11ty-tag }} {{ classes.tag }}">
+    11ty
+  </span>
+</a>
+{% endif -%} {%- if tags contains 'javascript' %}
+<a href="/tags/javascript" class="">
+  <span class="{{ classes.js-tag }} {{ classes.tag }}">
+    javascript
+  </span>
+</a>
+{% endif -%} {%- if tags contains 'tailwindcss' %}
+<a href="/tags/tailwindcss" class="">
+  <span class="{{ classes.tailwind-tag }} {{ classes.tag }}">
+    tailwindcss
+  </span>
+</a>
+{% endif -%}

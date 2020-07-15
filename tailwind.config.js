@@ -41,6 +41,9 @@ module.exports = {
         'content-grid': '1fr minmax(auto,49em) 1fr',
         'post-display': '200px 4fr 2fr',
       },
+      inset: {
+        '1/2': '50%',
+      },
     },
   },
   variants: {

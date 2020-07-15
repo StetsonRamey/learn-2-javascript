@@ -1,0 +1,11 @@
+.colors-top-circle {
+  @apply z-20 absolute h-24 w-24 left-1/2 transform -translate-x-1/2 rounded-full;
+}
+
+.colors-bottom-circle {
+  @apply z-0 absolute h-24 w-24 left-1/2 transform -translate-x-1/2 ml-3 mt-8 rounded-full;
+}
+
+.colors-text {
+  @apply absolute w-20 bottom-0 ml-2 left-1/2 transform -translate-x-1/2;
+}

@@ -2,7 +2,7 @@
   <h2>11<span class="lowercase">ty</span></h2>
   <div class="grid md:grid-cols-post-display items-stretch">
     {% for item in collections.11ty reversed %}
-    <a href="#" class="mb-1 post-row">
+    <a href="{{ item.url }}" class="mb-1 post-row">
       <div>
         <time value="{{ item.date }}" class="text-sm text-gray-500 mr-8">
           {{ item.date | readableDate }}
