@@ -19,7 +19,7 @@
       style="scroll-margin-top: 5rem;"
       class="mx-auto max-w-screen-xl mt-32 md:mt-8"
     >
-      <section>
+      <section class="grid gap-4 lg:grid-cols-post lg:gap-12">
         <article class="mx-auto measure markdown">
           <time value="{{ date }}" class="text-sm text-gray-600"
             >Last updated: {{ date | readableDate }}</time
@@ -31,44 +31,77 @@
             {{ content }}
           </div>
         </article>
-        <aside class="border-t-2 border-gray-400">
-          <section class="my-8">
-            <img
-              class="mx-auto mb-4 rounded-full"
-              src="https://via.placeholder.com/200"
-              alt="Icon"
-            />
-            <p class="text-sm">
-              I'm Stetson, and if you're here that's cool. I'm learning
-              Javascript, and this collection of writing is me figuring it, and
-              other things I'm interested in out.
-            </p>
-          </section>
-          <section class="my-8">
-            <h3>Tags</h3>
-            <div class="flex items-center py-1 mb-6">
-              {% include tags.html %}
-            </div>
-          </section>
-          <section class="my-8">
-            <h3>Always</h3>
-            <ul class="text-demoBorder text-sm" >
-              <li>No ads</li>
-              <li>No social media</li>
-              <li>No tracking / analytics</li>
-              <li>No other sponsored shit I don't use</li>
-              <li>No affiliate links</li>
-              <li>No third-party scripts</li>
-              <li>No third-party scripts</li>
-              <li>No trash</li>
-            </ul>
-            <p class="text-sm">If you like (or dislike) anything on this site, email me and let me know.  I'll email you back.</p>
-          </section>
+        <aside class="border-t-2 border-gray-400 lg:border-t-0">
+          <div class="lg:border-l lg:pl-4">
+            <section class="my-8">
+              <img
+                class="mx-auto mb-4 rounded-full"
+                src="https://via.placeholder.com/200"
+                alt="Icon"
+              />
+              <p class="text-sm">
+                I'm Stetson, and if you're here that's cool. I'm learning
+                Javascript, and this collection of writing is me figuring it,
+                and other things I'm interested in out.
+              </p>
+            </section>
+            <section class="my-8">
+              <h3>Tags</h3>
+              <div class="flex items-center py-1 mb-6">
+                {% include tags.html %}
+              </div>
+            </section>
+            <section class="my-8">
+              <h3>Always</h3>
+              <ul class="text-demoBorder text-sm">
+                <li>No ads</li>
+                <li>No social media</li>
+                <li>No tracking / analytics</li>
+                <li>No other sponsored shit I don't use</li>
+                <li>No affiliate links</li>
+                <li>No third-party scripts</li>
+                <li>No third-party scripts</li>
+                <li>No trash</li>
+              </ul>
+              <p class="text-sm">
+                If you like (or dislike) anything on this site, email me and let
+                me know. I'll email you back.
+              </p>
+            </section>
+          </div>
         </aside>
       </section>
       <h2>Up next</h2>
-      <nav class="flex flex-col items-stretch -mx-4 max-w-screen-lg">
-        <a rel="prev" href="" class="text-center text-lg text-gray-700 font-semibold m-4 p-6 rounded-md shadow-lg border border-gray-200 hover:shadow-xl ">Button goes here</a>
+        {% assign previousPost = collections.posts | getPreviousCollectionItem: page %}
+        {% assign nextPost = collections.posts | getNextCollectionItem: page %}
+        <!-- <ul>
+          {% if previousPost %}
+          <li><a href="{{ previousPost.url }}">prev: {{ previousPost.data.title }}</li></a>
+          {% endif %}
+          {% if nextPost %}
+          <li><a href="{{ nextPost.url }}">next: {{ nextPost.data.title }}</a></li>
+          {% endif %}
+        </ul> -->
+
+      <nav
+        class="flex flex-col md:flex-row items-stretch -mx-4 max-w-screen-xl"
+      >
+        {% if previousPost %}
+        <a
+          rel="prev"
+          href="{{ previousPost.url }}"
+          class="text-center text-lg text-gray-700 font-semibold m-4 p-6 rounded-md shadow-lg border-4 border-gray-200 hover:bg-secondary hover:border-4 hover:border-demoTxt hover:text-demoTxt md:flex-1/2"
+          >{{ previousPost.data.title }}</a
+        >
+        {% endif %}
+        {% if nextPost %}
+        <a
+          rel="next"
+          href="{{ nextPost.url }}"
+          class="text-center text-lg text-gray-700 font-semibold m-4 p-6 rounded-md shadow-lg border-4 border-gray-200 hover:bg-secondary hover:text-demoTxt hover:border-4 hover:border-demoTxt md:flex-1/2"
+          >{{ nextPost.data.title }}</a
+        >
+        {% endif %}
       </nav>
     </main>
 

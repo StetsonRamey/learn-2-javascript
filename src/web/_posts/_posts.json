@@ -1,6 +1,5 @@
 {
   "author": "Stetson Ramey",
   "layout": "layouts/post.liquid",
-  "permalink": "/web/{{ page.fileSlug }}/",
-  "tags": "post"
+  "permalink": "/web/{{ page.fileSlug }}/"
 }

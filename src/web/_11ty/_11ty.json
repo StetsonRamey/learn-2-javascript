@@ -1,6 +1,0 @@
-{
-  "author": "Stetson Ramey",
-  "layout": "layouts/post.liquid",
-  "permalink": "/web/11ty/{{ page.fileSlug }}/",
-  "tags": "11ty"
-}

@@ -40,9 +40,13 @@ module.exports = {
         '2': '1.5rem 1fr 13.5rem 2.5rem',
         'content-grid': '1fr minmax(auto,49em) 1fr',
         'post-display': '200px 4fr 2fr',
+        post: '3fr 1fr',
       },
       inset: {
         '1/2': '50%',
+      },
+      flex: {
+        '1/2': '0 0 calc(50% - 2rem)',
       },
     },
   },
@@ -56,6 +60,7 @@ module.exports = {
       'dark-focus',
     ],
     borderColor: ['hover', 'focus', 'dark', 'dark-hover', 'dark-focus'],
+    borderWidth: ['responsive', 'hover', 'focus'],
     textColor: ['hover', 'focus', 'dark', 'dark-hover', 'dark-focus'],
     padding: ['first', 'last', 'responsive'],
     margin: ['first', 'last', 'responsive'],

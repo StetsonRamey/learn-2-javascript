@@ -1,7 +1,7 @@
 <section>
   <h2>Latest</h2>
   <div class="grid md:grid-cols-post-display items-stretch">
-    {% for item in collections.post reversed %}
+    {% for item in collections.posts reversed %}
     <a href="{{ item.url }}" class="post-row">
       <div>
         <time value="{{ item.date }}" class="text-sm text-gray-500 mr-8">
