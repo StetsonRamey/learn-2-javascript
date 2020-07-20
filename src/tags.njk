@@ -3,16 +3,45 @@ pagination:
   data: collections
   size: 1
   alias: tag
-permalink: /tags/{{ tag }}/
+  filter:
+    - all
+    - blog
+  addAllPagesToCollections: true
 layout: layouts/tania.liquid
-title: Posts tagged "{{ tag }}"
+renderData:
+  title: "Posts Tagged: {{ tag }}"
+permalink: /tags/{{ tag }}/
 ---
 
 <h1>Tag: {{ tag }}</h1>
+{% set numTags %}
+  {{ collections[ tag ] | length }}
+{% endset %}
+<p>{% if numTags == 1 %} 1 post found. {% else %}{{ numTags }} posts found.{% endif %}</p>
 
-<ol>
+<div class="grid md:row-gap-8 md:grid-cols-post-display items-stretch">
 {% set taglist = collections[ tag ] %}
 {% for post in taglist | reverse %}
-  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+  <a href="{{ post.url }}" class="post-row">
+    <div class="md:self-center">
+      <time value="{{ post.date }}" class="text-sm text-gray-500 mr-8">
+        {{ post.date | readableDate }}
+      </time>
+    </div>
+    <div class="text-xl font-bold md:self-center hover:text-red-700">
+      {{ post.data.title}}
+    </div>
+    <div class="flex items-center py-1 mb-4 md:mb-0 mx-0">
+      {% if post.data.tags %}
+        {% for tag in post.data.tags %}
+        <a href="{% if tag == '11ty' %}/tags/11ty/{% elif tag == 'tailwind' %}/tags/tailwindcss/{% elif tag == 'javascript' %}/tags/javascript/{% endif %}" class="">
+          <span class="{% if tag == '11ty' %}{{ classes.11tyTag }}{% elif tag == 'tailwindcss' %}{{ classes.tailwindTag }}{% elif tag == 'javascript' %}{{ classes.jsTag }} {% endif %} {{ classes.tag }}">
+            {{ tag }}
+          </span>
+        </a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </a>
 {% endfor %}
-</ol>
+</div>

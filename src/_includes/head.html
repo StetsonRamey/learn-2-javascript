@@ -44,8 +44,10 @@ This content *may* be used as a part of search engine results. -->
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
 <title>
-  {% if title %}{{ title }} - {{ site.title }}{% else %}{{ site.title }}{% endif
-  %}
+  {% if renderData.title %}{{ renderData.title }} - {{ site.title }}
+  {% elsif title %}{{ title }} - {{ site.title }}
+  {% else %}{{ site.title }}
+  {% endif %}
 </title>
 
 <!-- Apple Touch Icon (reuse 192px icon.png) & standard favicons -->

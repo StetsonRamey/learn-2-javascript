@@ -1,6 +1,6 @@
 ---
 layout: layouts/tania.liquid
-title: Blog |
+title: Blog
 description: 'How 2 Javascript Blog Roll'
 ---
 
@@ -23,19 +23,19 @@ description: 'How 2 Javascript Blog Roll'
       <div class="flex items-center py-1 mb-4 md:mb-0">
         {%- if item.data.tags contains '11ty' %}
         <a href="/tags/11ty" class="">
-          <span class="{{ classes.11ty-tag }} {{ classes.tag }}">
+          <span class="{{ classes.11tyTag }} {{ classes.tag }}">
             11ty
           </span>
         </a>
         {% endif -%} {%- if item.data.tags contains 'javascript' %}
         <a href="/tags/javascript" class="">
-          <span class="{{ classes.js-tag }} {{ classes.tag }}">
+          <span class="{{ classes.jsTag }} {{ classes.tag }}">
             javascript
           </span>
         </a>
         {% endif -%} {%- if item.data.tags contains 'tailwindcss' %}
         <a href="/tags/tailwindcss" class="">
-          <span class="{{ classes.tailwind-tag }} {{ classes.tag }}">
+          <span class="{{ classes.tailwindTag }} {{ classes.tag }}">
             tailwindcss
           </span>
         </a>

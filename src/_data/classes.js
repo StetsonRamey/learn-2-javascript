@@ -10,10 +10,9 @@ module.exports = {
   '2Col': 'grid-cols-2 col-gap-4',
   contact_button: 'btn btn-primary text-white dark:text-cool-gray-900',
   footer: 'my-20 mx-auto max-w-screen-xl',
-  tag: 'text-sm py-1 px-2 mx-1 rounded-sm',
-  'js-tag':
-    'text-gray-900 bg-yellow-400 hover:text-gray-800 hover:bg-yellow-600',
-  'tailwind-tag':
+  tag: 'text-sm py-1 px-2 mr-1 rounded-sm',
+  jsTag: 'text-gray-900 bg-yellow-400 hover:text-gray-800 hover:bg-yellow-600',
+  tailwindTag:
     'text-gray-900 bg-teal-600 hover:text-gray-800 hover:bg-teal-300',
-  '11ty-tag': 'text-gray-100 bg-gray-800 hover:text-gray-800 hover:bg-gray-500',
+  '11tyTag': 'text-gray-100 bg-gray-800 hover:text-gray-800 hover:bg-gray-500',
 };
