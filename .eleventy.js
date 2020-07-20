@@ -38,9 +38,6 @@ module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  // Get all the tags
-  eleventyConfig.addCollection("tagList", require("./src/_11ty/getTagList"))
-
   // Static assets to pass through
   eleventyConfig.addPassthroughCopy('src/assets');
 

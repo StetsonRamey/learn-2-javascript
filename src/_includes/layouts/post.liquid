@@ -9,7 +9,6 @@
     {% else %}
     <link rel="stylesheet" href="/assets/style.css" />
     {% endif %}
-    <title>{{ renderData.title }}</title>
   </head>
 
   <body class="px-6 bg-gray-100">
@@ -72,9 +71,10 @@
         </aside>
       </section>
       <h2>Up next</h2>
-        {% assign previousPost = collections.posts | getPreviousCollectionItem: page %}
-        {% assign nextPost = collections.posts | getNextCollectionItem: page %}
-        <!-- <ul>
+      {% assign previousPost = collections.posts | getPreviousCollectionItem:
+      page %} {% assign nextPost = collections.posts | getNextCollectionItem:
+      page %}
+      <!-- <ul>
           {% if previousPost %}
           <li><a href="{{ previousPost.url }}">prev: {{ previousPost.data.title }}</li></a>
           {% endif %}
@@ -93,8 +93,7 @@
           class="text-center text-lg text-gray-700 font-semibold m-4 p-6 rounded-md shadow-lg border-4 border-gray-200 hover:bg-secondary hover:border-4 hover:border-demoTxt hover:text-demoTxt md:flex-1/2"
           >{{ previousPost.data.title }}</a
         >
-        {% endif %}
-        {% if nextPost %}
+        {% endif %} {% if nextPost %}
         <a
           rel="next"
           href="{{ nextPost.url }}"
