@@ -8,7 +8,18 @@ to consistently ensure proper document rendering. Any other head element
 should come *after* these tags. -->
 
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name="msapplication-TileColor" content="#da532c" />
+<meta name="theme-color" content="#ffffff" />
 
 <!-- Theme Color for Chrome, Firefox OS and Opera -->
 <meta name="theme-color" content="{{ site.meta_data.theme_color }}" />
@@ -44,36 +55,23 @@ This content *may* be used as a part of search engine results. -->
 <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
 <title>
-  {% if renderData.title %}{{ renderData.title }} - {{ site.title }}
-  {% elsif title %}{{ title }} - {{ site.title }}
-  {% else %}{{ site.title }}
-  {% endif %}
+  {% if renderData.title %}{{ renderData.title }} - {{ site.title }} {% elsif
+  title %}{{ title }} - {{ site.title }} {% else %}{{ site.title }} {% endif %}
 </title>
-
-<!-- Apple Touch Icon (reuse 192px icon.png) & standard favicons -->
-<!-- Icon in the highest resolution we need it for -->
-<!-- <link rel="icon" sizes="192x192" href="/assets/img/favicon.png" /> -->
-<!-- Apple Touch Icon (reuse 192px icon.png) -->
-<!-- <link rel="apple-touch-icon" href="/assets/img/favicon.png" /> -->
-
-<!-- Facebook Open Graph meta -->
-<!-- <meta property="og:url" content="{{ site.url}}{{ page.url }}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
-{% if site.meta_data.default_social_image or featured_image %}
-<meta property="og:image"
-  content="{% if env == 'production' %}{{ site.url }}{% endif %}{% if featured_image %}{{ featured_image }}{% else %}{{ site.meta_data.default_social_image }}{% endif %}" />
-{% endif %}
-<meta property="og:description"
-  content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
-<meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:locale" content="{{ site.meta_data.locale }}">
-<meta property="article:author" content="{{ site.author.name }}"> -->
 
 <!-- Twitter Open Graph meta -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="{{ site.meta_data.twitter_username }}" />
+<meta name="twitter:title" content="{{ site.title }} - My attempts to make sense of Javascript" />
+<meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
+<meta name="twitter:image" content="https://how2javascript.com/assets/static/twitter-large-card.png" />
 <meta name="twitter:creator" content="{{ site.meta_data.twitter_username }}" />
+<!-- Open Graph Meta -->
+<meta property="og:url" content="https://how2javascript.com" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{site.title}} - My attemps to make sense of Javascript" />
+<meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
+<meta property="og:image" content="https://how2javascript.com/assets/static/twitter-large-card.png" />
 
 <!-- disallow Twitter from using your site's info for personalization purposes -->
 <meta name="twitter:dnt" content="on" />
