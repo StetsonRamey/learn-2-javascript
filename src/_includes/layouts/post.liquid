@@ -33,11 +33,21 @@
         <aside class="border-t-2 border-gray-400 lg:border-t-0">
           <div class="lg:border-l lg:pl-4">
             <section class="my-8">
-              <img
-                class="mx-auto mb-4 rounded-full"
-                src="https://via.placeholder.com/200"
-                alt="Icon"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="../../assets/static/stet-profile-200.webp"
+                />
+                <source
+                  type="image/jpeg"
+                  srcset="../../assets/static/stets_profile_200.jpg"
+                />
+                <img
+                  src="../../assets/static/stets_profile_200.jpg"
+                  alt="Stetson Profile Photo"
+                  class="mx-auto mb-4 rounded-full"
+                />
+              </picture>
               <p class="text-sm">
                 I'm Stetson, and if you're here that's cool. I'm learning
                 Javascript, and this collection of writing is me figuring it,

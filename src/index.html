@@ -86,18 +86,34 @@ description: 'Learn 2 Javascript'
       </p>
     </div>
   </div>
-  <div class="ml-8 rounded-md md:flex-shrink-0 hidden md:block max-w-screen-sm">
-    <img
-      src="https://via.placeholder.com/200"
-      srcset="
-        https://via.placeholder.com/200 200w,
-        https://via.placeholder.com/350 350w
-      "
-      sizes="(max-width: 1024px) 200px,
-    350px"
-      alt=""
-      class="rounded-md"
-    />
+  <div class="ml-8 rounded-md md:flex-shrink-0 hidden md:block max-w-screen-sm self-start">
+    <picture>
+      <source
+        type="image/webp"
+        media="(max-width: 1023px)"
+        srcset="assets/static/stet-profile-200.webp"
+      />
+      <source
+        type="image/webp"
+        media="(min-width: 1024px)"
+        srcset="assets/static/stet-profile-350.webp"
+      />
+      <source
+        type="image/jpeg"
+        media="(max-width: 1023px)"
+        srcset="assets/static/stets_profile_200.jpg"
+      />
+      <source
+        type="image/jpeg"
+        media="(min-width: 1024px)"
+        srcset="assets/static/stets_profile_350.jpg"
+      />
+      <img
+        src="assets/static/stets_profile_350.jpg"
+        alt="Stetson Profile Photo"
+        class="rounded-md"
+      />
+    </picture>
   </div>
 </section>
 {% include latest-posts.html %} {% include 11ty-series.html %}
